@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApplication3.Properties {
+namespace BigNumbers.KeyboardPerApplication.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,30 +20,6 @@ namespace WindowsFormsApplication3.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("serbian")]
-        public string skype {
-            get {
-                return ((string)(this["skype"]));
-            }
-            set {
-                this["skype"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("serbian")]
-        public string viber {
-            get {
-                return ((string)(this["viber"]));
-            }
-            set {
-                this["viber"] = value;
             }
         }
     }
