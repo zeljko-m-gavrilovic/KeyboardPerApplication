@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Configuration;
 using System.Data;
+using System.Collections;
 
 namespace BigNumbers.KeyboardPerApplication
 {
@@ -93,15 +94,21 @@ namespace BigNumbers.KeyboardPerApplication
                 /*
                  * Change the keyboard language for a foreground application if user has preferences 
                  */
-                foreach(SettingsProperty userProperty in Properties.Settings.Default.Properties) {
-                    if (appName.ToLower().Contains((string) userProperty.Name))
-                    {
-                        InputLanguage language = GetInputLanguageByName((string) userProperty.DefaultValue);
-                        if(language != null) {
-                            bool result = PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, IntPtr.Zero, language.Handle);
-                            //Console.WriteLine("keyboard changed for foreground application "
-                            //    + userProperty.Name + 
-                            //    " to keyboard language: " + language.LayoutName);
+                List<string[]> preferences = getPreferences();
+                for(int i = 0; i < preferences.Count; i++) {
+                    string application = preferences[i][0];
+                    if(application != null) {
+                        
+                        if (appName.ToLower().Contains(application.ToLower()))
+                        {
+                            string keyboard = preferences[i][1];
+                            InputLanguage language = GetInputLanguageByName(keyboard);
+                            if(language != null) {
+                                bool result = PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, IntPtr.Zero, language.Handle);
+                                //Console.WriteLine("keyboard changed for foreground application "
+                                //    + userProperty.Name + 
+                                //    " to keyboard language: " + language.LayoutName);
+                            }
                         }
                     }
                 }
@@ -136,7 +143,7 @@ namespace BigNumbers.KeyboardPerApplication
                 trayMenu.Items.Add(aboutMenuItem);
 
                 ToolStripMenuItem exitMenuItem = new ToolStripMenuItem("Exit");
-                aboutMenuItem.Click += new EventHandler(OnExit);
+                exitMenuItem.Click += new EventHandler(OnExit);
                 trayMenu.Items.Add(exitMenuItem);
                 
 
@@ -163,16 +170,22 @@ namespace BigNumbers.KeyboardPerApplication
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Application");
                 dt.Columns.Add("Keyboard Language layout");
-                foreach (SettingsProperty userProperty in Properties.Settings.Default.Properties)
+               
+                /*
+                 * parse the stored properties
+                 */
+                List<string[]> result = getPreferences();
+
+                for (int i = 0; i < result.Count; i++)
                 {
-                    dt.Rows.Add(userProperty.Name, userProperty.DefaultValue);
+                    dt.Rows.Add(result[i][0], result[i][1]);
                 }
 
                 Form preferencesForm = new PreferencesForm(dt);
                 preferencesForm.ShowDialog();
                 if (preferencesForm.DialogResult == DialogResult.OK)
                 {
-                    Properties.Settings.Default.Properties.Clear();
+                    string propertiesToBeStored = "";
                     foreach (DataRow row in dt.Rows)
                     {
                         string application = row[0].ToString();
@@ -181,22 +194,41 @@ namespace BigNumbers.KeyboardPerApplication
                             (keyboardLayout != null) && (keyboardLayout.Length > 0);
                         if (validData)
                         {
-                            SettingsProperty newProperty = new SettingsProperty(application);
-                            newProperty.DefaultValue = keyboardLayout;
-                            newProperty.IsReadOnly = false;
-                            Properties.Settings.Default.Properties.Add(newProperty); 
+                            string pair = application + '=' +  keyboardLayout + ";";
+                            propertiesToBeStored = propertiesToBeStored + pair;
                         }
                     }
-                    Properties.Settings.Default.Save(); 
+                    Properties.Settings.Default.preferences = propertiesToBeStored;
+                    Properties.Settings.Default.Save();
                 }
+            
                 preferencesForm.Dispose();
             }
 
+            private static List<string[]> getPreferences()
+            {
+                string properties = Properties.Settings.Default.preferences;
+                List<string[]> result = new List<string[]>();
+                if(properties != null && properties.Length > 0) {
+                    string[] pairs = properties.Split(';');
+                    for (int i = 0; i < pairs.Length; i++)
+                    {
+                        if(pairs[i].Length > 0 && pairs[i].Contains('=')) {
+                            string[] values = pairs[i].Split('=');
+                            string application = values[0];
+                            string keyboard = values[1];
+                            result.Add(new string[2] {application, keyboard});
+                        }
+                    }
+                }
+                return result;
+            }
+
+
+
             private void OnAbout(object sender, EventArgs e)
             {
-                MessageBox.Show("This application tracks which application is in foreground and then " +
-                                "automatically changes the keyboard layout for focused application " +
-                                "according to the user preferences set in this application");
+                new AboutBox().ShowDialog();
             }
 
             private void OnExit(object sender, EventArgs e)

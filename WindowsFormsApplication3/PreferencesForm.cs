@@ -46,7 +46,7 @@ namespace BigNumbers.KeyboardPerApplication
             {       
                 dataGridView1.Rows.Add(dr.ItemArray[0]);
                 DataGridViewComboBoxCell cell = ((DataGridViewComboBoxCell) dataGridView1.Rows[ri++].Cells[1]);
-                cell.Value = dr.ItemArray[1];
+                cell.Value = dr.ItemArray[1].ToString().ToLower();
             }
             RegistryKey rk = Registry.CurrentUser.OpenSubKey(registryKey, true);
             checkBox1.Checked = (rk.GetValue(appName) != null);
@@ -104,6 +104,11 @@ namespace BigNumbers.KeyboardPerApplication
             {
                 rk.DeleteValue(appName, false);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

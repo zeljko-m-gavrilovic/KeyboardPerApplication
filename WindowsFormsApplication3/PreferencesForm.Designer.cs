@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreferencesForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.applicationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keyboardLayoutColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.okButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.applicationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.keyboardLayoutColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -51,11 +51,23 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.applicationColumn,
             this.keyboardLayoutColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(454, 140);
+            this.dataGridView1.Size = new System.Drawing.Size(454, 121);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // applicationColumn
+            // 
+            this.applicationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.applicationColumn.HeaderText = "Application";
+            this.applicationColumn.Name = "applicationColumn";
+            // 
+            // keyboardLayoutColumn
+            // 
+            this.keyboardLayoutColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.keyboardLayoutColumn.HeaderText = "Keyboard Layout Language";
+            this.keyboardLayoutColumn.Name = "keyboardLayoutColumn";
             // 
             // okButton
             // 
@@ -95,7 +107,7 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.okButton);
             this.flowLayoutPanel1.Controls.Add(this.cancelButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(300, 215);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(300, 216);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(157, 27);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -111,6 +123,17 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 170);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(157, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Starts when Windows starts";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,29 +143,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Edit preferences (delete key to remove)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 169);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(157, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Starts when Windows starts";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // applicationColumn
-            // 
-            this.applicationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.applicationColumn.HeaderText = "Application";
-            this.applicationColumn.Name = "applicationColumn";
-            // 
-            // keyboardLayoutColumn
-            // 
-            this.keyboardLayoutColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.keyboardLayoutColumn.HeaderText = "Keyboard Layout Language";
-            this.keyboardLayoutColumn.Name = "keyboardLayoutColumn";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PreferencesForm
             // 
