@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("KeyboardPerApplication")]
-[assembly: AssemblyDescription("This application tracks which application is in focus and automatically changes the input keyboard language per end user preferences set in this application")]
+[assembly: AssemblyDescription("This application tracks applications in focus and automatically changes the input keyboard language according to the user preferences set in this application.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BigNumbers")]
 [assembly: AssemblyProduct("KeyboardPerApplication")]

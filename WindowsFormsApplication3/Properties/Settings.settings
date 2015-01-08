@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="preferences" Type="System.String" Scope="User">
-      <Value Profile="(Default)">xyz=serbian (latin, serbia);</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

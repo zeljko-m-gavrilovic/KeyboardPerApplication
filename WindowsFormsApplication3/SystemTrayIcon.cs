@@ -151,10 +151,14 @@ namespace BigNumbers.KeyboardPerApplication
                  * Create a tray icon
                 */
                 trayIcon = new NotifyIcon();
-                trayIcon.Text = "Set a keyboard layout per application";
+                string trayMessage = "Use right mouse click to open the context menu";
+                trayIcon.Text = trayMessage;
                 trayIcon.Icon = new Icon(GetType(), "Oxygen-Icons.org-Oxygen-Apps-accessories-character-map.ico");
                 trayIcon.ContextMenuStrip = trayMenu;
                 trayIcon.Visible = true;
+                trayIcon.BalloonTipTitle = "KeyboardPerApplication";
+                trayIcon.BalloonTipText = trayMessage;
+                trayIcon.ShowBalloonTip(100);
             }
 
             protected override void OnLoad(EventArgs e)
