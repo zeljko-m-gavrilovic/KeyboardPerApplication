@@ -12,7 +12,7 @@ using System.Configuration;
 using System.Data;
 using System.Collections;
 
-namespace BigNumbers.KeyboardPerApplication
+namespace BigNumbers.letters
 {
    
 
@@ -161,7 +161,7 @@ namespace BigNumbers.KeyboardPerApplication
                 trayIcon.Icon = new Icon(GetType(), "Oxygen-Icons.org-Oxygen-Apps-accessories-character-map.ico");
                 trayIcon.ContextMenuStrip = trayMenu;
                 trayIcon.Visible = true;
-                trayIcon.BalloonTipTitle = "KeyboardPerApplication";
+                trayIcon.BalloonTipTitle = "letters";
                 trayIcon.BalloonTipText = trayMessage;
                 trayIcon.ShowBalloonTip(100);
             }

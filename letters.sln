@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardPerApplication", "WindowsFormsApplication3\KeyboardPerApplication.csproj", "{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "letters", "WindowsFormsApplication3\letters.csproj", "{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KeyboardPerApplication Setup", "Setup1\Setup1.vdproj", "{CE5F5027-86C5-4E5C-B0C7-B2EC2B2AB60D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "letters Setup", "Setup1\Setup1.vdproj", "{CE5F5027-86C5-4E5C-B0C7-B2EC2B2AB60D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

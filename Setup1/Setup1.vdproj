@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:KeyboardPerApplication Setup"
+"ProjectName" = "8:letters Setup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -45,7 +45,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\KeyboardPerAplication Setup.msi"
+        "OutputFilename" = "8:Debug\\letters Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -169,7 +169,7 @@
                         {
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_90A9F092C0A24FC381B18ED534C69AD1"
                             {
-                            "Name" = "8:KeyboardPerApplication"
+                            "Name" = "8:letters"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
@@ -209,16 +209,16 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:KeyboardPerApplication"
-        "ProductCode" = "8:{FD0A6E53-07E6-4D3D-9361-7C05D79F7182}"
-        "PackageCode" = "8:{74DF3D85-978F-4D52-8B25-5A82DBBCA842}"
+        "ProductName" = "8:letters"
+        "ProductCode" = "8:{2384052B-D7AD-43C1-812D-AACEC321516F}"
+        "PackageCode" = "8:{B7CD726B-060B-4250-8270-8A948D81F3A8}"
         "UpgradeCode" = "8:{B66101DB-F0AF-4C9A-BA35-A2BEFB3AEA85}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:Big Numbers"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -333,7 +333,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E3AB224620504FB7911DFD7BDBA7C115"
             {
-            "Name" = "8:Shortcut to KeyboardPerApplication (Active)"
+            "Name" = "8:Shortcut to letters (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -774,7 +774,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_940588E58F704CF3839252CB7A394301"
             {
-            "SourcePath" = "8:..\\WindowsFormsApplication3\\obj\\Debug\\KeyboardPerApplication.exe"
+            "SourcePath" = "8:..\\WindowsFormsApplication3\\obj\\Debug\\letters.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F762D66F6B5449BA92275F6B74056677"
@@ -802,7 +802,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E92EE1AEAC5C4136BEC9A33212379EF2"
             {
-            "SourcePath" = "8:..\\WindowsFormsApplication3\\obj\\Debug\\KeyboardPerApplication.exe"
+            "SourcePath" = "8:..\\WindowsFormsApplication3\\obj\\Debug\\letters.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_90A9F092C0A24FC381B18ED534C69AD1"

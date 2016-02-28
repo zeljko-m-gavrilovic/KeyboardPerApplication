@@ -1,4 +1,4 @@
-﻿namespace BigNumbers.KeyboardPerApplication
+﻿namespace BigNumbers.letters
 {
     partial class AboutBox
     {
@@ -10,9 +10,9 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose(bool disposing)
+       protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+           if (disposing && (components != null))
             {
                 components.Dispose();
             }

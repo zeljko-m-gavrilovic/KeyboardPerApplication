@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BigNumbers.KeyboardPerApplication
+namespace BigNumbers.letters
 {
     partial class AboutBox : Form
     {

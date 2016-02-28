@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KeyboardPerApplication")]
+[assembly: AssemblyTitle("letters")]
 [assembly: AssemblyDescription("This application tracks applications in focus and automatically changes the input keyboard language according to the user preferences set in this application.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BigNumbers")]
-[assembly: AssemblyProduct("KeyboardPerApplication")]
+[assembly: AssemblyProduct("letters")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

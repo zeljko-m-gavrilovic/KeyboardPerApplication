@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using System.Configuration;
 using Microsoft.Win32;
 
-namespace BigNumbers.KeyboardPerApplication
+namespace BigNumbers.letters
 {
     public partial class PreferencesForm : Form
     {
         DataTable dt;
         const string registryKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-        const string appName = "KeyboardPerApplication";
+        const string appName = "letters";
 
         public PreferencesForm()
         {

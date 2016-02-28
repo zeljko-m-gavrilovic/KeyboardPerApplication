@@ -1,4 +1,4 @@
-﻿namespace BigNumbers.KeyboardPerApplication
+﻿namespace BigNumbers.letters
 {
     partial class PreferencesForm
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BigNumbers.KeyboardPerApplication</RootNamespace>
-    <AssemblyName>KeyboardPerApplication</AssemblyName>
+    <RootNamespace>BigNumbers.letters</RootNamespace>
+    <AssemblyName>letters</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
