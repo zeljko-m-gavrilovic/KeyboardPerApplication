@@ -111,5 +111,10 @@ namespace BigNumbers.KeyboardPerApplication
         {
 
         }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

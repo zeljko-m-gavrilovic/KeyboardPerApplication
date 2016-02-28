@@ -97,21 +97,26 @@ namespace BigNumbers.KeyboardPerApplication
                 List<string[]> preferences = getPreferences();
                 for(int i = 0; i < preferences.Count; i++) {
                     string application = preferences[i][0];
-                    if(application != null) {
-                        
+                    if(application != null) {    
                         if (appName.ToLower().Contains(application.ToLower()))
                         {
                             string keyboard = preferences[i][1];
                             InputLanguage language = GetInputLanguageByName(keyboard);
                             if(language != null) {
                                 bool result = PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, IntPtr.Zero, language.Handle);
+                                return;
                                 //Console.WriteLine("keyboard changed for foreground application "
-                                //    + userProperty.Name + 
-                                //    " to keyboard language: " + language.LayoutName);
+                                    //+ userProperty.Name + 
+                                //    + " to keyboard language: " + language.LayoutName);
                             }
                         }
                     }
                 }
+                InputLanguage defaultLanguage = InputLanguage.DefaultInputLanguage;
+                PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, IntPtr.Zero, defaultLanguage.Handle);
+                    //Console.WriteLine("keyboard changed for foreground application "
+                    //                //+ userProperty.Name +
+                    //                + " to default keyboard language: " + defaultLanguage.LayoutName);
             }
 
            
