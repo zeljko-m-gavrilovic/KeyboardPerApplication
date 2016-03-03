@@ -116,5 +116,10 @@ namespace BigNumbers.letters
         {
 
         }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

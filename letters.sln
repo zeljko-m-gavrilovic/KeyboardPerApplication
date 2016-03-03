@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "letters", "WindowsFormsApplication3\letters.csproj", "{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}"
 EndProject
@@ -18,9 +18,8 @@ Global
 		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Debug|Default.ActiveCfg = Debug|Any CPU
-		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Release|Default.ActiveCfg = Release|Any CPU
+		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC9FB6A-59DE-4ADD-9444-DE8644F9DDE5}.Release|Default.ActiveCfg = Debug|Any CPU
 		{CE5F5027-86C5-4E5C-B0C7-B2EC2B2AB60D}.Debug|Any CPU.ActiveCfg = Debug
 		{CE5F5027-86C5-4E5C-B0C7-B2EC2B2AB60D}.Debug|Default.ActiveCfg = Debug
 		{CE5F5027-86C5-4E5C-B0C7-B2EC2B2AB60D}.Debug|Default.Build.0 = Debug
